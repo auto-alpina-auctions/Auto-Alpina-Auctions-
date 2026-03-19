@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vehicle details at Auto Alpina Auctions – Springs, Johannesburg." />
+  <title>Vehicle Details | Auto Alpina Auctions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <i class="bi bi-geo-alt-fill me-1 text-accent"></i>
+        22 2nd Avenue, Springs, Johannesburg
+        <span class="separator">|</span>
+        <i class="bi bi-clock me-1"></i> Mon–Fri: 8am–5pm &nbsp;|&nbsp; Sat: 8am–1pm
+      </div>
+      <div>
+        <a href="tel:0112197114"><i class="bi bi-telephone-fill me-1"></i>011 219 7114</a>
+        <span class="separator">|</span>
+        <a href="tel:0875104114"><i class="bi bi-telephone-fill me-1"></i>087 510 4114</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="navbar-logo">AA</div>
+        <div class="navbar-brand-text">
+          <span class="navbar-brand-name">Auto Alpina Auctions</span>
+          <span class="navbar-brand-tagline">Quality Pre-Owned Vehicles</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto me-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="inventory.html">Our Cars</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a href="tel:0632730003" class="navbar-phone">
+          <i class="bi bi-telephone-fill"></i> 063 273 0003
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header (populated by JS) -->
+  <div class="page-header" id="vehicleHeader">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="inventory.html">Inventory</a></li>
+          <li class="breadcrumb-item active" id="breadcrumbVehicle">Vehicle</li>
+        </ol>
+      </nav>
+      <h1 id="vehicleHeaderTitle">Vehicle Details</h1>
+      <p id="vehicleHeaderSub">Loading...</p>
+    </div>
+  </div>
+
+  <!-- Vehicle Detail Content -->
+  <section class="section-pad-sm" id="vehicleContent">
+    <div class="container">
+      <div id="vehicleNotFound" class="d-none text-center py-5">
+        <i class="bi bi-exclamation-triangle-fill" style="font-size:3rem;color:#e8a020;"></i>
+        <h3 class="mt-3">Vehicle Not Found</h3>
+        <p class="text-muted">This vehicle may no longer be available.</p>
+        <a href="inventory.html" class="btn btn-primary mt-3">Browse All Vehicles</a>
+      </div>
+
+      <div id="vehicleDetail" class="d-none">
+        <div class="row g-4">
+
+          <!-- Gallery -->
+          <div class="col-lg-7">
+            <div class="vehicle-detail-gallery">
+              <img id="mainImage" src="" alt="Vehicle main image" class="vehicle-main-image" />
+              <div class="vehicle-thumb-grid mt-2" id="thumbGrid"></div>
+            </div>
+
+            <!-- Vehicle Description -->
+            <div class="mt-4 p-4 bg-white border rounded-3 shadow-sm">
+              <h4 style="color:var(--primary-dark);font-weight:700;margin-bottom:12px;">
+                <i class="bi bi-file-text me-2 text-accent"></i>Description
+              </h4>
+              <p id="vehicleDescription" style="color:var(--text-muted);line-height:1.8;"></p>
+            </div>
+
+            <!-- Features -->
+            <div class="mt-4 p-4 bg-white border rounded-3 shadow-sm">
+              <h4 style="color:var(--primary-dark);font-weight:700;margin-bottom:16px;">
+                <i class="bi bi-check-circle me-2 text-accent"></i>Key Features
+              </h4>
+              <ul class="vehicle-features-list" id="vehicleFeatures"></ul>
+            </div>
+          </div>
+
+          <!-- Info Panel -->
+          <div class="col-lg-5">
+            <div class="vehicle-info-panel">
+              <div id="vehicleBadgeArea"></div>
+              <div class="vehicle-price-large" id="vehiclePrice"></div>
+              <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:20px;">Price inclusive of VAT</div>
+
+              <div class="vehicle-specs-grid" id="vehicleSpecsGrid"></div>
+
+              <!-- Enquiry form -->
+              <div class="alert-success-custom" id="enquirySuccess">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                Thank you! Your enquiry has been sent. We'll be in touch shortly.
+              </div>
+              <form id="enquiryForm">
+                <div class="mb-3">
+                  <label class="form-label-custom">Your Name *</label>
+                  <input type="text" class="form-control-custom" name="name" required placeholder="Full name" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label-custom">Phone Number *</label>
+                  <input type="tel" class="form-control-custom" name="phone" required placeholder="e.g. 082 000 0000" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label-custom">Email Address</label>
+                  <input type="email" class="form-control-custom" name="email" placeholder="you@example.com" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label-custom">Message</label>
+                  <textarea class="form-control-custom" name="message" rows="3" placeholder="I'm interested in this vehicle..."></textarea>
+                </div>
+                <button type="submit" class="btn-enquire">
+                  <i class="bi bi-envelope me-2"></i>Send Enquiry
+                </button>
+              </form>
+
+              <a href="tel:0632730003" class="btn-call-dealer mt-2">
+                <i class="bi bi-telephone me-2"></i>Call: 063 273 0003
+              </a>
+
+              <div class="mt-4 p-3 rounded-3" style="background:var(--bg-light);border:1px solid var(--border-color);">
+                <div style="font-size:0.8rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">
+                  <i class="bi bi-person-circle me-1"></i> Your Sales Contact
+                </div>
+                <div style="font-weight:700;color:var(--primary-dark);">Mthobisi Sihlezana</div>
+                <div style="font-size:0.9rem;color:var(--text-muted);">
+                  <i class="bi bi-telephone me-1"></i>
+                  <a href="tel:0632730003" style="color:var(--primary);">063 273 0003</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Related Vehicles -->
+        <div class="mt-5">
+          <h3 style="font-weight:800;color:var(--primary-dark);margin-bottom:24px;">
+            <i class="bi bi-collection me-2 text-accent"></i>You May Also Like
+          </h3>
+          <div class="row g-4" id="relatedVehicles"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-logo-text">Auto Alpina Auctions</div>
+          <p class="footer-tagline">We make the car-buying experience simple, smooth, and stress-free. Visit us at our Springs showroom today.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inventory.html">Our Cars</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="footer-heading">Contact Info</div>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>22 2nd Avenue, Springs, Johannesburg</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <a href="tel:0112197114" style="color:rgba(255,255,255,0.75);">011 219 7114</a><br/>
+              <a href="tel:0875104114" style="color:rgba(255,255,255,0.75);">087 510 4114</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-person-fill"></i>
+            <div>
+              <div style="color:rgba(255,255,255,0.75);">Mthobisi Sihlezana</div>
+              <a href="tel:0632730003" style="color:rgba(255,255,255,0.75);">063 273 0003</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="footer-heading">Business Hours</div>
+          <ul class="footer-links">
+            <li>Monday – Friday: 8:00 – 17:00</li>
+            <li>Saturday: 8:00 – 13:00</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom mt-5">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <p>&copy; <span id="footerYear"></span> Auto Alpina Auctions (Pty) Ltd. All rights reserved.</p>
+        <p>22 2nd Avenue, Springs, Johannesburg</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/inventory-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    const params = new URLSearchParams(window.location.search);
+    const vehicleId = params.get('id');
+    const vehicle = vehicleId ? getVehicleById(vehicleId) : null;
+
+    if (!vehicle) {
+      document.getElementById('vehicleNotFound').classList.remove('d-none');
+    } else {
+      document.getElementById('vehicleDetail').classList.remove('d-none');
+
+      // Update page title and header
+      const title = `${vehicle.year} ${vehicle.make} ${vehicle.model}`;
+      document.title = `${title} | Auto Alpina Auctions`;
+      document.getElementById('vehicleHeaderTitle').textContent = title;
+      document.getElementById('vehicleHeaderSub').textContent = `${vehicle.bodyType} • ${vehicle.color} • ${vehicle.transmission}`;
+      document.getElementById('breadcrumbVehicle').textContent = title;
+
+      // Main image
+      const mainImg = document.getElementById('mainImage');
+      mainImg.src = vehicle.images[0];
+      mainImg.alt = title;
+
+      // Thumbnails
+      const thumbGrid = document.getElementById('thumbGrid');
+      vehicle.images.forEach((src, i) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `${title} - image ${i + 1}`;
+        img.className = `vehicle-thumb${i === 0 ? ' active' : ''}`;
+        img.loading = 'lazy';
+        img.addEventListener('click', () => {
+          mainImg.src = src;
+          document.querySelectorAll('.vehicle-thumb').forEach(t => t.classList.remove('active'));
+          img.classList.add('active');
+        });
+        thumbGrid.appendChild(img);
+      });
+
+      // Badge
+      if (vehicle.badge) {
+        document.getElementById('vehicleBadgeArea').innerHTML = `
+          <div class="vehicle-badge mb-3" style="position:static;display:inline-block;">${vehicle.badge}</div>`;
+      }
+
+      // Price
+      document.getElementById('vehiclePrice').textContent = formatPrice(vehicle.price);
+
+      // Description
+      document.getElementById('vehicleDescription').textContent = vehicle.description;
+
+      // Specs grid
+      const specsData = [
+        { label: 'Year', value: vehicle.year, icon: 'bi-calendar3' },
+        { label: 'Mileage', value: vehicle.mileage.toLocaleString() + ' km', icon: 'bi-speedometer2' },
+        { label: 'Transmission', value: vehicle.transmission, icon: 'bi-gear' },
+        { label: 'Fuel Type', value: vehicle.fuelType, icon: 'bi-fuel-pump' },
+        { label: 'Engine', value: vehicle.engineSize, icon: 'bi-engine' },
+        { label: 'Colour', value: vehicle.color, icon: 'bi-palette' },
+        { label: 'Body Type', value: vehicle.bodyType, icon: 'bi-car-front' },
+        { label: 'Condition', value: vehicle.condition, icon: 'bi-star' },
+      ];
+      const specsGrid = document.getElementById('vehicleSpecsGrid');
+      specsData.forEach(spec => {
+        const div = document.createElement('div');
+        div.className = 'vehicle-spec-block';
+        div.innerHTML = `
+          <div class="vehicle-spec-block-label"><i class="bi ${spec.icon} me-1"></i>${spec.label}</div>
+          <div class="vehicle-spec-block-value">${spec.value}</div>`;
+        specsGrid.appendChild(div);
+      });
+
+      // Features
+      const featuresList = document.getElementById('vehicleFeatures');
+      vehicle.features.forEach(f => {
+        const li = document.createElement('li');
+        li.textContent = f;
+        featuresList.appendChild(li);
+      });
+
+      // Related vehicles (same make or body type, excluding current)
+      const related = vehicles
+        .filter(v => v.id !== vehicle.id && (v.make === vehicle.make || v.bodyType === vehicle.bodyType))
+        .slice(0, 3);
+
+      const relatedGrid = document.getElementById('relatedVehicles');
+      if (related.length > 0) {
+        related.forEach(v => {
+          relatedGrid.innerHTML += `
+            <div class="col-lg-4 col-md-6">
+              <div class="vehicle-card">
+                <div class="vehicle-card-img-wrapper">
+                  <img src="${v.images[0]}" alt="${v.year} ${v.make} ${v.model}" class="vehicle-card-img" loading="lazy" />
+                  ${v.badge ? `<div class="vehicle-badge">${v.badge}</div>` : ''}
+                </div>
+                <div class="vehicle-card-body">
+                  <div class="vehicle-card-title">${v.make} ${v.model}</div>
+                  <div class="vehicle-card-year">${v.year} &bull; ${v.color} &bull; ${v.bodyType}</div>
+                  <div class="vehicle-card-specs">
+                    <span class="vehicle-spec-item"><i class="bi bi-speedometer2"></i> ${v.mileage.toLocaleString()} km</span>
+                    <span class="vehicle-spec-item"><i class="bi bi-gear"></i> ${v.transmission}</span>
+                  </div>
+                  <div class="vehicle-card-price">${formatPrice(v.price)}</div>
+                  <a href="vehicle-detail.html?id=${v.id}" class="btn-view-car">View Details <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>`;
+        });
+      } else {
+        relatedGrid.closest('.mt-5').remove();
+      }
+    }
+  </script>
+</body>
+</html>
