@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2744;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0392b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#922b21;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a93226;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="80%" r="50%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)" />
+  <!-- Glow effect under car -->
+  <ellipse cx="400" cy="420" rx="320" ry="60" fill="url(#glow)" />
+  <!-- Ground shadow -->
+  <ellipse cx="400" cy="425" rx="260" ry="16" fill="rgba(0,0,0,0.5)" />
+  <!-- Road line hints -->
+  <line x1="0" y1="440" x2="800" y2="440" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+  <!-- Car body lower -->
+  <rect x="90" y="318" width="620" height="95" rx="14" fill="url(#carBody)" />
+  <!-- Car body highlight -->
+  <rect x="90" y="318" width="620" height="20" rx="14" fill="rgba(255,255,255,0.08)" />
+  <!-- Car roof / cabin -->
+  <path d="M205,318 L250,215 Q262,198 285,198 L515,198 Q538,198 550,215 L595,318 Z" fill="url(#roofGrad)" />
+  <!-- Roof highlight -->
+  <path d="M250,215 Q262,198 285,198 L515,198 Q538,198 550,215 L530,218 Q518,205 515,205 L285,205 Q265,205 255,218 Z" fill="rgba(255,255,255,0.1)" />
+  <!-- Front windscreen -->
+  <path d="M510,208 L552,318 L475,318 L475,215 Z" fill="rgba(160,210,255,0.2)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+  <!-- Rear windscreen -->
+  <path d="M290,208 L248,318 L325,318 L325,215 Z" fill="rgba(160,210,255,0.2)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+  <!-- Side window -->
+  <rect x="330" y="210" width="140" height="104" rx="8" fill="rgba(160,210,255,0.18)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+  <!-- Window reflection -->
+  <path d="M334,214 L344,214 L334,240 Z" fill="rgba(255,255,255,0.12)" />
+  <!-- Door lines -->
+  <line x1="400" y1="323" x2="400" y2="410" stroke="rgba(0,0,0,0.25)" stroke-width="2.5" />
+  <line x1="295" y1="323" x2="295" y2="410" stroke="rgba(0,0,0,0.2)" stroke-width="2" />
+  <line x1="505" y1="323" x2="505" y2="410" stroke="rgba(0,0,0,0.2)" stroke-width="2" />
+  <!-- Door handles -->
+  <rect x="338" y="368" width="32" height="8" rx="4" fill="rgba(255,255,255,0.3)" />
+  <rect x="430" y="368" width="32" height="8" rx="4" fill="rgba(255,255,255,0.3)" />
+  <!-- Front bumper detail -->
+  <path d="M90,378 Q80,385 80,395 L90,413 L105,413 L105,378 Z" fill="rgba(0,0,0,0.3)" />
+  <!-- Front headlight -->
+  <path d="M95,325 Q100,315 125,318 L130,340 Q110,348 95,345 Z" fill="rgba(255,250,200,0.15)" stroke="rgba(255,220,80,0.6)" stroke-width="2" />
+  <path d="M100,328 Q105,320 122,322 L126,337 Q110,342 100,339 Z" fill="rgba(255,250,200,0.35)" />
+  <!-- Headlight beam hint -->
+  <path d="M80,330 L30,280 L35,278 L85,328 Z" fill="rgba(255,250,200,0.04)" />
+  <!-- Rear lights -->
+  <rect x="660" y="322" width="40" height="28" rx="6" fill="rgba(200,40,40,0.2)" stroke="rgba(255,60,60,0.6)" stroke-width="2" />
+  <rect x="666" y="328" width="28" height="16" rx="3" fill="rgba(255,60,60,0.5)" />
+  <!-- Front wheel -->
+  <circle cx="208" cy="413" r="55" fill="#0a0a0a" stroke="#222" stroke-width="3" />
+  <circle cx="208" cy="413" r="38" fill="#161616" stroke="#3a3a3a" stroke-width="2.5" />
+  <circle cx="208" cy="413" r="15" fill="#202020" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+  <!-- Wheel spokes front -->
+  <line x1="208" y1="375" x2="208" y2="398" stroke="rgba(255,255,255,0.18)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="208" y1="428" x2="208" y2="451" stroke="rgba(255,255,255,0.18)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="170" y1="413" x2="193" y2="413" stroke="rgba(255,255,255,0.18)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="223" y1="413" x2="246" y2="413" stroke="rgba(255,255,255,0.18)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="181" y1="386" x2="196" y2="401" stroke="rgba(255,255,255,0.12)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="220" y1="425" x2="235" y2="440" stroke="rgba(255,255,255,0.12)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Rear wheel -->
+  <circle cx="592" cy="413" r="55" fill="#0a0a0a" stroke="#222" stroke-width="3" />
+  <circle cx="592" cy="413" r="38" fill="#161616" stroke="#3a3a3a" stroke-width="2.5" />
+  <circle cx="592" cy="413" r="15" fill="#202020" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+  <!-- Wheel spokes rear -->
+  <line x1="592" y1="375" x2="592" y2="398" stroke="rgba(255,255,255,0.18)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="592" y1="428" x2="592" y2="451" stroke="rgba(255,255,255,0.18)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="554" y1="413" x2="577" y2="413" stroke="rgba(255,255,255,0.18)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="607" y1="413" x2="630" y2="413" stroke="rgba(255,255,255,0.18)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="565" y1="386" x2="580" y2="401" stroke="rgba(255,255,255,0.12)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="604" y1="425" x2="619" y2="440" stroke="rgba(255,255,255,0.12)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Brand badge -->
+  <circle cx="400" cy="160" r="35" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+  <text x="400" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="900" fill="rgba(255,200,50,0.9)" text-anchor="middle">AA</text>
+  <text x="400" y="168" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="1">AUCTIONS</text>
+  <!-- Stars -->
+  <text x="320" y="90" font-family="Arial" font-size="16" fill="rgba(255,200,50,0.6)">★</text>
+  <text x="345" y="76" font-family="Arial" font-size="12" fill="rgba(255,200,50,0.4)">★</text>
+  <text x="450" y="80" font-family="Arial" font-size="14" fill="rgba(255,200,50,0.5)">★</text>
+  <text x="475" y="95" font-family="Arial" font-size="10" fill="rgba(255,200,50,0.35)">★</text>
+  <!-- Bottom text -->
+  <text x="400" y="482" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="4">QUALITY PRE-OWNED VEHICLES</text>
+</svg>

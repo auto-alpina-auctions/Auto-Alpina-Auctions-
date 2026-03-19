@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e1a32;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="carGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c4a7c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a3060;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a5fa0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c4a7c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)" />
+  <!-- Ground shadow -->
+  <ellipse cx="400" cy="410" rx="260" ry="20" fill="rgba(0,0,0,0.35)" />
+  <!-- Car body lower -->
+  <rect x="110" y="310" width="580" height="90" rx="12" fill="url(#carGrad)" />
+  <!-- Car roof -->
+  <path d="M220,310 L260,220 Q270,205 290,205 L510,205 Q530,205 540,220 L580,310 Z" fill="url(#roofGrad)" />
+  <!-- Windscreen front -->
+  <path d="M500,215 L538,310 L470,310 L470,222 Z" fill="rgba(180,220,255,0.22)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" />
+  <!-- Windscreen rear -->
+  <path d="M300,215 L262,310 L330,310 L330,222 Z" fill="rgba(180,220,255,0.22)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" />
+  <!-- Side windows -->
+  <rect x="335" y="218" width="130" height="88" rx="6" fill="rgba(180,220,255,0.2)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" />
+  <!-- Door lines -->
+  <line x1="400" y1="315" x2="400" y2="398" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+  <line x1="300" y1="315" x2="300" y2="398" stroke="rgba(255,255,255,0.10)" stroke-width="1.5" />
+  <line x1="500" y1="315" x2="500" y2="398" stroke="rgba(255,255,255,0.10)" stroke-width="1.5" />
+  <!-- Door handle left -->
+  <rect x="330" y="358" width="30" height="7" rx="3.5" fill="rgba(255,255,255,0.25)" />
+  <!-- Door handle right -->
+  <rect x="440" y="358" width="30" height="7" rx="3.5" fill="rgba(255,255,255,0.25)" />
+  <!-- Front headlight -->
+  <ellipse cx="162" cy="335" rx="28" ry="18" fill="rgba(255,240,180,0.15)" stroke="rgba(255,220,100,0.5)" stroke-width="2" />
+  <ellipse cx="162" cy="335" rx="18" ry="11" fill="rgba(255,240,180,0.3)" />
+  <!-- Rear light -->
+  <rect x="618" y="320" width="36" height="22" rx="5" fill="rgba(255,60,60,0.18)" stroke="rgba(255,60,60,0.55)" stroke-width="2" />
+  <rect x="624" y="325" width="24" height="12" rx="3" fill="rgba(255,60,60,0.4)" />
+  <!-- Front wheel -->
+  <circle cx="220" cy="400" r="52" fill="#111" stroke="#333" stroke-width="3" />
+  <circle cx="220" cy="400" r="36" fill="#1e1e1e" stroke="#555" stroke-width="2" />
+  <circle cx="220" cy="400" r="14" fill="#2a2a2a" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+  <!-- Front wheel spokes -->
+  <line x1="220" y1="364" x2="220" y2="386" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="220" y1="414" x2="220" y2="436" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="184" y1="400" x2="206" y2="400" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="234" y1="400" x2="256" y2="400" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Rear wheel -->
+  <circle cx="580" cy="400" r="52" fill="#111" stroke="#333" stroke-width="3" />
+  <circle cx="580" cy="400" r="36" fill="#1e1e1e" stroke="#555" stroke-width="2" />
+  <circle cx="580" cy="400" r="14" fill="#2a2a2a" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+  <!-- Rear wheel spokes -->
+  <line x1="580" y1="364" x2="580" y2="386" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="580" y1="414" x2="580" y2="436" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="544" y1="400" x2="566" y2="400" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="594" y1="400" x2="616" y2="400" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Logo text -->
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="rgba(255,255,255,0.35)" text-anchor="middle" letter-spacing="3">AUTO ALPINA AUCTIONS</text>
+</svg>

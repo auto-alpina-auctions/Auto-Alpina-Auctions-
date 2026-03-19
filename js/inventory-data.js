@@ -17,8 +17,8 @@ const vehicles = [
     description: "Well-maintained Toyota Corolla 1.8 XS Auto. Full service history, accident-free. One owner.",
     features: ["Bluetooth", "Reverse Camera", "Cruise Control", "Electric Windows", "ABS", "Airbags"],
     images: [
-      "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: "Hot Deal"
   },
@@ -38,8 +38,8 @@ const vehicles = [
     description: "Stunning VW Polo 1.0 TSI Comfortline Auto. Still under manufacturer warranty. Spotless condition.",
     features: ["Apple CarPlay", "Android Auto", "Touchscreen", "Park Distance Control", "Lane Assist", "Cruise Control"],
     images: [
-      "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: "Low Mileage"
   },
@@ -59,8 +59,8 @@ const vehicles = [
     description: "BMW 320i M Sport Auto. Luxury package included. Full BMW service history. Stunning machine.",
     features: ["iDrive Navigation", "Heated Seats", "Sunroof", "Harman Kardon Sound", "Parking Sensors", "Adaptive Cruise"],
     images: [
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80",
-      "https://images.unsplash.com/photo-1520031441872-265e4ff70366?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: ""
   },
@@ -80,8 +80,8 @@ const vehicles = [
     description: "Ford Ranger 3.2 XLT 4x4 Auto. Canopy included. One owner, full service history. Never been off-road.",
     features: ["4x4", "Canopy", "Bluetooth", "Reverse Camera", "Tow Bar", "Cruise Control"],
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-      "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: "Popular"
   },
@@ -101,8 +101,8 @@ const vehicles = [
     description: "Hyundai Tucson 2.0 Elite Auto. Panoramic sunroof, full leather interior. Still under warranty.",
     features: ["Panoramic Sunroof", "Leather Seats", "Navigation", "Blind Spot Monitor", "Lane Keep Assist", "Wireless Charging"],
     images: [
-      "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80",
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: "New Arrival"
   },
@@ -122,8 +122,8 @@ const vehicles = [
     description: "Mercedes-Benz C200 AMG Line Auto. Full leather, panoramic roof. Complete service history with MB dealer.",
     features: ["AMG Styling", "Panoramic Roof", "Comand Navigation", "Burmester Sound", "Heated Seats", "Memory Seats"],
     images: [
-      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80",
-      "https://images.unsplash.com/photo-1605515298946-d664b5d54302?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: ""
   },
@@ -143,8 +143,8 @@ const vehicles = [
     description: "Toyota Hilux 2.8 GD-6 Legend 50 4x4 Auto. Nearly new with only 18,000km. Comprehensive warranty remaining.",
     features: ["4x4", "Leather Seats", "Navigation", "Reverse Camera", "Tow Bar", "Cruise Control", "Lane Departure Warning"],
     images: [
-      "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: "Premium"
   },
@@ -164,8 +164,8 @@ const vehicles = [
     description: "Kia Sportage 2.0 EX Auto. Full Kia service history, one careful owner. Panoramic sunroof.",
     features: ["Panoramic Sunroof", "Leather Seats", "Navigation", "Reverse Camera", "Blind Spot Detection", "Smart Key"],
     images: [
-      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=800&q=80",
-      "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: ""
   },
@@ -185,8 +185,8 @@ const vehicles = [
     description: "Audi A3 1.4 TFSI Stronic. S-line exterior package, full leather interior. Complete Audi dealer service history.",
     features: ["S-Line Package", "Leather Seats", "MMI Navigation", "Xenon Lights", "Cruise Control", "Park Assist"],
     images: [
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: ""
   },
@@ -206,8 +206,8 @@ const vehicles = [
     description: "Nissan X-Trail 2.5 Tekna 4WD CVT. Third row seating, panoramic roof. One owner with full service history.",
     features: ["7 Seater", "4WD", "Panoramic Roof", "360 Camera", "Navigation", "Heated Seats"],
     images: [
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80",
-      "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: ""
   },
@@ -227,8 +227,8 @@ const vehicles = [
     description: "Honda Jazz 1.5 Hybrid. Exceptional fuel economy, near-new condition. Perfect city car.",
     features: ["Hybrid System", "Apple CarPlay", "Android Auto", "Honda Sensing Suite", "Magic Seats", "LED Lights"],
     images: [
-      "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: "Eco"
   },
@@ -248,8 +248,8 @@ const vehicles = [
     description: "Mazda CX-5 2.2D Individual AWD Auto. Mazda Soul Red, premium interior. Full service history.",
     features: ["AWD", "Leather Seats", "Bose Sound System", "Head-Up Display", "360 Monitor", "i-Activsense"],
     images: [
-      "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80",
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80"
+      "images/car-placeholder.svg",
+      "images/car-placeholder.svg"
     ],
     badge: ""
   }
